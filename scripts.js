@@ -46,7 +46,7 @@ autocomplete.controller('autocomplete-controller', function($scope){
     $scope.keyNavigation = function($event){
         var keyCode = $event.keyCode;
         switch(keyCode){
-            case 38:
+            case 38: //up arrow key
                 $event.preventDefault();
                 if($scope.resultIndex > -1){
                     $scope.resultIndex--;
@@ -54,7 +54,7 @@ autocomplete.controller('autocomplete-controller', function($scope){
                     $scope.resultIndex = $scope.indexUpperBound;
                 }
                 break;
-            case 40:
+            case 40: //down arrow key
                 $event.preventDefault();
                 if($scope.resultIndex < $scope.indexUpperBound){
                     $scope.resultIndex++;
@@ -62,7 +62,7 @@ autocomplete.controller('autocomplete-controller', function($scope){
                     $scope.resultIndex = -1;
                 }
                 break;
-            case 13: 
+            case 13: //enter key
                 if($scope.resultIndex > -1 && $scope.searchData != {}){
                     window.location.assign($scope.searchData.results[$scope.resultIndex].url);
                 }
