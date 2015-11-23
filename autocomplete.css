@@ -1,0 +1,28 @@
+.autocomplete1,.autocomplete2{
+	height: 45vh;
+}
+
+.autocomplete2-results a{
+	text-decoration: none;
+	color: black;
+}
+
+.autocomplete2-results li{
+	list-style-type: none;
+}
+
+.autocomplete2-results div{
+	font-family: "Lato", sans-serif;
+	text-align: center;
+	padding: 10px;
+	margin-left: 5px;
+	margin-right: 45px;
+	border-bottom: 1px solid white;
+	color: black;
+	background-color:lightgrey;
+}
+
+.selected1, .autocomplete2-results li:hover{
+	color: red;
+}
+
