@@ -31,6 +31,7 @@ autocomplete.controller('autocomplete-controller', function($scope){
                 } else {
                     $scope.indexUpperBound = $scope.totalResults - 1;
             }
+            $scope.$apply();
             }
         })
     }
