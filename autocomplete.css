@@ -1,6 +1,6 @@
 .autocomplete1,.autocomplete2{
 	height: 45vh;
-	overflow:scroll;
+	overflow: auto;
 }
 
 .autocomplete2-results a{
