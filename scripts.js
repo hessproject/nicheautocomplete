@@ -47,7 +47,7 @@ autocomplete.controller('autocomplete-controller', function($scope){
     $scope.keyNavigation = function($event){
         var keyCode = $event.keyCode;
         switch(keyCode){
-            case 38: //up arrow key
+            case 38: //up arrow
                 $event.preventDefault();
                 if($scope.resultIndex > -1){
                     $scope.resultIndex--;
@@ -55,7 +55,7 @@ autocomplete.controller('autocomplete-controller', function($scope){
                     $scope.resultIndex = $scope.indexUpperBound;
                 }
                 break;
-            case 40: //down arrow key
+            case 40: //down arrow
                 $event.preventDefault();
                 if($scope.resultIndex < $scope.indexUpperBound){
                     $scope.resultIndex++;
