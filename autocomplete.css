@@ -5,6 +5,7 @@
 
 /* Autocomplete 1 Basic List Styling */
 .autocomplete1 input{
+	/* font size 16 stops iOS from zooming on input focus */
 	font-size: 16px;
 }
 .autocomplete input:focus{
@@ -140,6 +141,7 @@
 	border-left: 3px solid #1d6464;
 }
 
+/* making text bigger for easier mobile navigation */
 @media only screen and (max-device-width: 736px) { 
   	.autocomplete1-results ul li a{
   		font-size: 16px;
