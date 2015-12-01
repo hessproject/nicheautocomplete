@@ -1,0 +1,42 @@
+/* Autocomplete 1 list styling */
+.autocomplete1-results a{
+	text-decoration: none;
+}
+
+.autocomplete1-results li{
+	font-family: "Roboto", sans-serif;
+}
+/* Autocomplete 1 key selection/hover */
+.selected1 a, .autocomplete1-results a:hover{
+	color: red;
+}
+
+
+
+/* Autocomplete 2 list styling */
+.autocomplete2-results ul{
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+}
+.autocomplete2-results li{
+	font-family: "Lato", sans-serif;
+	text-align: center;
+	padding: 5px;
+	margin: 0 auto;
+	border-bottom: 1px solid white;
+	color: black;
+	background-color:lightgrey;
+	width: 70%;
+}
+
+.autocomplete2-results a{
+	text-decoration: none;
+	color: black;
+}
+
+/* Autocomplete 2 key selection/hover */
+.selected2 a, .autocomplete2-results li:hover a{
+	color: red;
+}
+

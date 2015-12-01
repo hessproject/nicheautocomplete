@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+
+	 	<meta charset="UTF-8"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+		<link href='https://fonts.googleapis.com/css?family=Lato:900' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Roboto:500' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="autocomplete.css">
+
+	</head>
+
+	<body ng-app="autocomplete">
+
+		<div class="container-fluid row">
+
+			<!--Autocomplete Style 1-->
+			<div class="autocomplete1 form-group col-xs-12 col-sm-6" ng-controller="autocomplete-controller">
+				<h5>Style 1</h5>
+				<div class="input-group">
+					<input type="search" ng-model="searchQuery" ng-change="update()" ng-keydown="keyNavigation($event)" class="form-control autocomplete" id="autocomplete1" placeholder="Search colleges and schools"></input>
+					<span class="input-group-addon">
+						<i class="glyphicon glyphicon-search"></i>
+					</span>
+				</div>
+				<div class="autocomplete1-results">
+					<ul>
+						<li class="result" ng-class="{'selected1': $index == resultIndex}" ng-repeat="result in searchData.results" ng-show="$index<resultsToDisplay"><a ng-href="{{result.url}}">{{result.name}}</a></li>
+					</ul>
+				</div>
+			</div><!--autocomplete1-->
+
+			<!--Autocomplete Style 2-->
+			<div class="autocomplete2 form-group col-xs-12 col-sm-6" ng-controller="autocomplete-controller">
+				<h5>Style 2</h5>
+				<div class="input-group">
+					<input type="search" ng-model="searchQuery" ng-change="update()" ng-keydown="keyNavigation($event)" class="form-control autocomplete" id="autocomplete2" placeholder="Search colleges and schools"></input>
+					<span class="input-group-addon">
+						<i class="glyphicon glyphicon-search"></i>
+					</span>
+				</div>
+				<div class="autocomplete2-results">
+					<ul>
+						<li class="result" ng-class="{'selected2': $index == resultIndex}" ng-repeat="result in searchData.results" ng-show="$index<resultsToDisplay"><a ng-href="{{result.url}}">{{result.name}}</a></li>
+					</ul>
+				</div>
+			</div><!--autocomplete2-->
+
+		</div>
+	</body>
+
+	<!--scripts-->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script type="text/javascript" src="JSONPUtil.js"></script>
+	<script type="text/javascript" src="scripts.js"></script>
+</html>
