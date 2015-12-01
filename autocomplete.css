@@ -39,52 +39,58 @@
 
 /* Start Autocomplete 2 list styling */
 .autocomplete2 input, .autocomplete2 span{
-	background-color: #9DC462;
-	color: #4F7514;
-	border: 1px solid #4F7514;
+	background-color: #c2dede; /* BASE */
+	color: #377c7c; /* DARK */
+	border: 1px solid #377c7c; /* DARK */
 	border-radius: 0px;
 }
 .autocomplete2 input:focus{
 	/* Overriding bootstrap's blue input glow */
-    border-color: #4F7514;
+    border-color: #377c7c; /* DARK */
     -webkit-box-shadow: none;
     box-shadow: none;
 }
 
 /* These must be seperate rules */
 .autocomplete2 input::-webkit-input-placeholder{
-	color:#749D34;
+	color: #377c7c; /* LIGHT */
 }
 .autocomplete2 input:-moz-placeholder{
-	color:#749D34;
+	color: #377c7c; /* LIGHT */
 	opacity: 1;
 }
 .autocomplete2 input::-moz-placeholder{
-	color:#749D34;
+	color: #377c7c; /* LIGHT */
 	opacity: 1;
 }
 .autocomplete2 input:-ms-input-placeholder{
-	color:#749D34;
+	color: #377c7c; /* LIGHT */
 }
 
 .autocomplete2-results{
 	margin-top: -1px;
-	background-color: #9DC462;
+	background-color: #c2dede; /* BASE */
 }
 .autocomplete2-results ul{
 	list-style-type: none;
-	background-color: #9DC462;
 	padding: 0px;
 	margin: 0px;
 }
+
 .autocomplete2-results ul li{
-	border-bottom: 1px solid #C4E691;
+   border-bottom: 1px solid white;
+}
+.autocomplete2-results ul li:last-child{
+	border-bottom: 0px;
+}
+.autocomplete2-results ul li:nth-child(10){ /* this should be set to the same value as resultsToDisplay in scripts.js */
+	border-bottom: 0px;
 }
 .autocomplete2-results ul li a{
 	display: block;
 	font-family: "Lato", sans-serif;
 	text-decoration: none;
-	color: #4F7514;
+	color: #599494; 
 	line-height: 20px;
 	padding-left: 20px;
 	padding-top: 5px;
@@ -93,7 +99,7 @@
 
 /* Autocomplete 2 Selected/Hover State Styling */
 .autocomplete2-results ul li.selected2 a, .autocomplete2-results li:hover a{
-	color: #2F4E00;
-	border-left: 3px solid #2F4E00;
+	color: #1d6464;
+	border-left: 3px solid #1d6464;
 }
 
