@@ -1,23 +1,15 @@
-/* Stop iOS zoom on input focus */
-/* Workaround from: http://stackoverflow.com/questions/2989263/disable-auto-zoom-in-input-text-tag-safari-on-iphone */
-@media screen and (-webkit-min-device-pixel-ratio:0){
-	select:focus,
-	textarea:focus,
-	input:focus{
-		font-size: 16px;
-	}
-	select,
-	textarea,
-	input{
-		font-size: 16px;
-	}
-}
-
 .autocomplete1,.autocomplete2{
 	min-height: 45vh;
 }
 
+
 /* Autocomplete 1 Basic List Styling */
+.autocomplete1 input{
+	font-size: 16px;
+}
+.autocomplete input:focus{
+	font-size:; 16px;
+}
 .autocomplete1-results{
 	font-family: "Roboto", sans-serif;
 	margin-top: 5px;
@@ -59,13 +51,20 @@
 	background: -moz-linear-gradient(#1ad6fd,#1d62f0);
 	background: linear-gradient(#1ad6fd,#1d62f0);
 
-	-ms-transform: scale(1.05)
-	-webkit-transform: scale(1.05);
-	transform: scale(1.05);
+	-ms-transform: scale(1.03)
+	-webkit-transform: scale(1.03);
+	transform: scale(1.03);
 } 
 
 /* Start Autocomplete 2 list styling */
-.autocomplete2 input, .autocomplete2 span{
+.autocomplete2 input{
+	font-size: 16px;
+	background-color: #c2dede;
+	color: #377c7c;
+	border: 1px solid #377c7c;
+	border-radius: 0px;
+}
+.autocomplete2 span{
 	background-color: #c2dede;
 	color: #377c7c;
 	border: 1px solid #377c7c;
@@ -73,6 +72,7 @@
 }
 .autocomplete2 input:focus{
 	/* Overriding bootstrap's blue input glow */
+	font-size: 16px;
     border-color: #377c7c;
     -webkit-box-shadow: none;
     box-shadow: none;
