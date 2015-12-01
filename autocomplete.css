@@ -1,3 +1,18 @@
+/* Stop iOS zoom on input focus */
+/* Workaround from: http://stackoverflow.com/questions/2989263/disable-auto-zoom-in-input-text-tag-safari-on-iphone */
+@media screen and (-webkit-min-device-pixel-ratio:0){
+	select:focus,
+	textarea:focus,
+	input:focus{
+		font-size: 16px;
+	}
+	select,
+	textarea,
+	input{
+		font-size: 16px;
+	}
+}
+
 .autocomplete1,.autocomplete2{
 	min-height: 45vh;
 }
@@ -26,6 +41,14 @@
 	padding-bottom: 5px;
 	margin-bottom: 2px;
 	border-radius: 4px;
+	-webkit-transition-property: transform;
+	-webkit-transition-duration: 50ms;
+	-webkit-transition-timing-focus: ease;
+	-webkit-transition-delay: 5ms;
+	transition-property: transform;
+	transition-duration: 50ms;
+	transition-timing-focus: ease;
+	transition-delay: 5ms;
 }
 
 /* Autocomplete 1 Selected/Hover State Styling */
@@ -35,6 +58,10 @@
 	background: -o-linear-gradient(#1ad6fd,#1d62f0);
 	background: -moz-linear-gradient(#1ad6fd,#1d62f0);
 	background: linear-gradient(#1ad6fd,#1d62f0);
+
+	-ms-transform: scale(1.05)
+	-webkit-transform: scale(1.05);
+	transform: scale(1.05);
 } 
 
 /* Start Autocomplete 2 list styling */
@@ -89,10 +116,10 @@
 .autocomplete2-results ul li a{
 	display: block;
   	-webkit-transition-property: border, color;
-  	-webkit-transition-duration: .2s;
+  	-webkit-transition-duration: .3s;
   	-webkit-transition-timing-function: ease;
   	transition-property: border, color;
-  	transition-duration: .2s;
+  	transition-duration: .3s;
   	transition-timing-function: ease;
 	font-family: "Lato", sans-serif;
 	text-decoration: none;
@@ -106,10 +133,10 @@
 /* Autocomplete 2 Selected/Hover State Styling */
 .autocomplete2-results ul li.selected2 a, .autocomplete2-results li:hover a{
   	-webkit-transition-property: border, color;
-  	-webkit-transition-duration: .2s;
+  	-webkit-transition-duration: .3s;
   	-webkit-transition-timing-function: ease;
   	transition-property: border, color;
-  	transition-duration: .2s;
+  	transition-duration: .3s;
   	transition-timing-function: ease;
 	color: #1d6464;
 	border-left: 3px solid #1d6464;
