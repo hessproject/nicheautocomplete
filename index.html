@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 
@@ -57,3 +58,61 @@
 	<script type="text/javascript" src="JSONPUtil.js"></script>
 	<script type="text/javascript" src="scripts.js"></script>
 </html>
+=======
+<!DOCTYPE html>
+<html>
+	<head>
+	 	<meta charset="UTF-8"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+		<link href='https://fonts.googleapis.com/css?family=Lato:900' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="autocomplete.css">
+	</head>
+	<body ng-app="autocomplete">
+
+		<div class="container-fluid">
+
+			<!--Unstyled autocomplete-->
+			<div class="autocomplete1 form-group" ng-controller="autocomplete-controller">
+				<h4>Unstyled</h4>
+				<div class="input-group">
+					<input type="search" ng-model="searchQuery" ng-change="update()" ng-keydown="keyNavigation($event)" class="form-control autocomplete" id="autocomplete1" placeholder="Search colleges and schools"></input>
+					<span class="input-group-addon">
+						<i class="glyphicon glyphicon-search"></i>
+					</span>
+				</div>
+				<div class="autocomplete1-results">
+					<ul>
+						<div class="result" ng-repeat="result in searchData.results" ng-show="$index<resultsToDisplay"><a ng-href="{{result.url}}"><li ng-class="{'selected1': $index == resultIndex}">{{result.name}}</li></a></div>
+					</ul>
+				</div>
+			</div><!--autocomplete1-->
+
+
+			<hr>
+			
+			<!--Styled autocomplete-->
+			<div class="autocomplete2 form-group" ng-controller="autocomplete-controller">
+				<h4>Styled</h4>
+				<div class="input-group">
+					<input type="search" ng-model="searchQuery" ng-change="update()" ng-keydown="keyNavigation($event)" class="form-control autocomplete" id="autocomplete2" placeholder="Search colleges and schools"></input>
+					<span class="input-group-addon">
+						<i class="glyphicon glyphicon-search"></i>
+					</span>
+				</div>
+				<div class="autocomplete2-results" >
+					<ul>
+						<div class="result" ng-repeat="result in searchData.results" ng-show="$index<resultsToDisplay"><a ng-href="{{result.url}}"><li ng-class="{'selected1': $index == resultIndex}">{{result.name}}</li></a></div>
+					</ul>
+				</div>
+			</div><!--autocomplete2-->
+
+		</div>
+	</body>
+
+	<!--scripts-->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script type="text/javascript" src="JSONPUtil.js"></script>
+	<script type="text/javascript" src="scripts.js"></script>
+</html>
+>>>>>>> da8c42905f76fe28ddf46a4dcab6e067f2f0dd0f
