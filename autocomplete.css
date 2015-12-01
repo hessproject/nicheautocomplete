@@ -42,6 +42,14 @@
 	transition-timing-focus: ease;
 	transition-delay: 5ms;
 }
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 736px) { 
+  	.autocomplete1-results ul li a{
+  		font-size: 16px;
+  	}
+}
+
 
 /* Autocomplete 1 Selected/Hover State Styling */
 .autocomplete1-results ul li.selected1 a, .autocomplete1-results ul li a:hover {
@@ -128,6 +136,13 @@
 	padding-left: 20px;
 	padding-top: 5px;
 	padding-bottom: 5px;
+}
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 736px) { 
+  	.autocomplete2-results ul li a{
+  		font-size: 16px;
+  	}
 }
 
 /* Autocomplete 2 Selected/Hover State Styling */
